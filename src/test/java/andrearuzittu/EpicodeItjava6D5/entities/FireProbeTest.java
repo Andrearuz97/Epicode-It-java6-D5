@@ -9,14 +9,14 @@ public class FireProbeTest {
 	@Test
 	public void testInitialSmokeLevelIsZero() {
 		FireProbe probe = new FireProbe(1L, "41.9028", "12.4964", 0);
-		assertEquals(0, probe.getSmokeLevel());
+		assertEquals(0, probe.getSmokeLevel(), "Initial smoke level should be 0");
 	}
 
 	@Test
 	public void testSetSmokeLevel() {
 		FireProbe probe = new FireProbe(1L, "41.9028", "12.4964", 0);
 		probe.setSmokeLevel(5);
-		assertEquals(5, probe.getSmokeLevel());
+		assertEquals(5, probe.getSmokeLevel(), "Smoke level should be set to 5");
 	}
 
 	@Test
@@ -24,7 +24,7 @@ public class FireProbeTest {
 		FireProbe probe = new FireProbe(1L, "41.9028", "12.4964", 0);
 		probe.setSmokeLevel(3);
 		String expectedUrl = "http://host/alarm?idsonda=1&lat=41.9028&lon=12.4964&smokelevel=3";
-		assertEquals(expectedUrl, probe.generateNotificationUrl());
+		assertEquals(expectedUrl, probe.generateNotificationUrl(), "Generated URL is incorrect");
 	}
 
 	@Test
