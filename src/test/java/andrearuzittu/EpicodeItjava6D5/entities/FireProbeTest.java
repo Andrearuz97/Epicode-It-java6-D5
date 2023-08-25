@@ -27,5 +27,17 @@ public class FireProbeTest {
 		assertEquals(expectedUrl, probe.generateNotificationUrl());
 	}
 
+	@Test
+	public void testSmokeLevelControlAboveThreshold() {
+		FireProbe probe = new FireProbe(1L, "41.9028", "12.4964", 0);
+		probe.setSmokeLevel(6);
 
+	}
+
+	@Test
+	public void testSmokeLevelControlBelowThreshold() {
+		FireProbe probe = new FireProbe(1L, "41.9028", "12.4964", 0);
+		probe.setSmokeLevel(3);
+
+	}
 }
