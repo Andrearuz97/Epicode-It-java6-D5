@@ -11,10 +11,10 @@ public class SmokeSimulationRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		FireProbe f1 = new FireProbe(1L, "41.9028", "12.4964", 0);
-		FireProbe f2 = new FireProbe(2L, "34.0522", "-118.2437", 9);
-		FireProbe f3 = new FireProbe(3L, "40.7128", "-74.0060", 6);
-		FireProbe f4 = new FireProbe(4L, "51.5074", "-0.1278", 3);
+		FireProbe f1 = new FireProbe(1L, "41.9028", "12.4964", 14);
+		FireProbe f2 = new FireProbe(2L, "34.0522", "-118.2437", 4);
+		FireProbe f3 = new FireProbe(3L, "40.7128", "-74.0060", 9);
+		FireProbe f4 = new FireProbe(4L, "51.5074", "-0.1278", 1);
 
 		ControlCenter cc = new ControlCenter();
 		cc.register(f1);
