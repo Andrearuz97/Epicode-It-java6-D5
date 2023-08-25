@@ -27,7 +27,7 @@ public class FireProbe implements Observer {
 
 		if (this.smokeLevel >= 5) {
 			String notificationUrl = generateNotificationUrl();
-			System.out.println("Attention! the probe n. " + id + " has registered a level of smoke " + smokeLevel
+			System.out.println("Attention! the probe n." + id + " has registered a level of smoke " + smokeLevel
 					+ ", latitudine: " + latitudine + " longitudine: " + longitudine);
 			System.out.println("\"The control center sent the notification URL: " + notificationUrl);
 		}
